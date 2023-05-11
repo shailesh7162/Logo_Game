@@ -20,6 +20,7 @@
         android:src="@drawable/arrow_back"/>
 
     <TextView
+        android:id="@+id/sublevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -28,5 +29,10 @@
         android:textSize="22sp"
         android:textStyle="bold"/>
     </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/logoRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

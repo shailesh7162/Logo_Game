@@ -14,7 +14,6 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
 {
     Context context;
     String[] number={"1","2","3","4","5","6","7","8","9","10"};
-    int i;
 
     public Level_Adpter(Context context)
     {
