@@ -22,8 +22,8 @@ public class Level_Activity extends AppCompatActivity
         setContentView(R.layout.activity_level);
         levelRecycler=findViewById(R.id.levelRecycler);
         backBtn1=findViewById(R.id.backBtn1);
-
-        levelRecycler.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
+       levelRecycler.setLayoutManager(new LinearLayoutManager(this));
+        level_adpter=new Level_Adpter(this);
         levelRecycler.setAdapter(level_adpter);
 
         backBtn1.setOnClickListener(new View.OnClickListener() {
