@@ -26,7 +26,8 @@ public class Level_Activity extends AppCompatActivity
         level_adpter=new Level_Adpter(this);
         levelRecycler.setAdapter(level_adpter);
 
-        backBtn1.setOnClickListener(new View.OnClickListener() {
+        backBtn1.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {

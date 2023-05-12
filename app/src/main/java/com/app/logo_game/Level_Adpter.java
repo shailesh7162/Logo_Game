@@ -36,6 +36,7 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context,Sub_levelActivity.class);
+                intent.putExtra("i",holder.getAdapterPosition());
                 context.startActivity(intent);
             }
         });
