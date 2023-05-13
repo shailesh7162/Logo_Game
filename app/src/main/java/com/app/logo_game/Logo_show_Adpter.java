@@ -15,14 +15,14 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sub_Level_Adpter extends RecyclerView.Adapter<Sub_Level_Adpter.ViewHolder>
+public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.ViewHolder>
 {
     Activity context;
     List<String> image;
     int pos;
 
 
-    public Sub_Level_Adpter(Activity context, ArrayList<String> image)
+    public Logo_show_Adpter(Activity context, ArrayList<String> image)
     {
         this.context=context;
         this.image=image;
@@ -30,7 +30,7 @@ public class Sub_Level_Adpter extends RecyclerView.Adapter<Sub_Level_Adpter.View
 
     @NonNull
     @Override
-    public Sub_Level_Adpter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Logo_show_Adpter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         view= LayoutInflater.from(context).inflate(R.layout.sub_level_iteam,parent,false);
         ViewHolder viewHolder=new ViewHolder(view);
@@ -38,7 +38,7 @@ public class Sub_Level_Adpter extends RecyclerView.Adapter<Sub_Level_Adpter.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Sub_Level_Adpter.ViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull Logo_show_Adpter.ViewHolder holder, int position)
     {
         InputStream inputStream=null;
         try {

@@ -35,7 +35,7 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
         holder.levelTxtv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context,Sub_levelActivity.class);
+                Intent intent=new Intent(context, Logo_show_Activity.class);
                 intent.putExtra("i",holder.getAdapterPosition());
                 context.startActivity(intent);
             }

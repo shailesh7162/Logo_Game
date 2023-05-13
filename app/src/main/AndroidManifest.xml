@@ -12,7 +12,10 @@
         android:theme="@style/Theme.Logo_Game"
         tools:targetApi="31">
         <activity
-            android:name=".Sub_levelActivity"
+            android:name=".Play_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Logo_show_Activity"
             android:exported="false" />
         <activity
             android:name=".Level_Activity"
