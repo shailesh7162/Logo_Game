@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class Level_Activity extends AppCompatActivity
@@ -25,8 +24,6 @@ public class Level_Activity extends AppCompatActivity
         levelRecycler.setLayoutManager(new LinearLayoutManager(this));
         level_adpter=new Level_Adpter(this);
         levelRecycler.setAdapter(level_adpter);
-
-
 
         backBtn1.setOnClickListener(new View.OnClickListener()
         {
