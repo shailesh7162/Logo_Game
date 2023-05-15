@@ -42,14 +42,9 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
     {
         InputStream inputStream=null;
         try {
-            if (i==i)
-            {
-                inputStream=context.getAssets().open("Level 1 US/"+image.get(position));
-            }
-            if (i==1)
-            {
-                inputStream=context.getAssets().open("Level 2 US/"+image.get(position));
-            }
+
+                inputStream=context.getAssets().open("Unsold/"+image.get(position));
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);

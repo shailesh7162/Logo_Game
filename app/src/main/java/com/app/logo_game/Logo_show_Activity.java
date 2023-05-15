@@ -29,15 +29,10 @@ public class Logo_show_Activity extends AppCompatActivity
 
         String images[];
         try {
-            if (i==0) {
-                images = getAssets().list("Level 1 US");
+                images = getAssets().list("Unsold");
                 image = new ArrayList<String>(Arrays.asList(images));
-            }
-            if (i==1)
-            {
-                images = getAssets().list("Level 2 US");
-                image = new ArrayList<String>(Arrays.asList(images));
-            }
+
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);
