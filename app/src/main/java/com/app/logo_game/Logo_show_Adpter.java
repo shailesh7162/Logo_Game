@@ -19,7 +19,7 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
 {
     Activity context;
     List<String> image;
-    int i;
+    int pos;
 
 
     public Logo_show_Adpter(Activity context, ArrayList<String> image)
@@ -42,8 +42,14 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
     {
         InputStream inputStream=null;
         try {
+            if (pos==0) {
 
-                inputStream=context.getAssets().open("Unsold/"+image.get(position));
+                inputStream = context.getAssets().open("Level 1 US/" + image.get(position));
+            }
+            if (pos==1)
+            {
+                inputStream = context.getAssets().open("Level 2 US/" + image.get(position));
+            }
 
 
         } catch (IOException e) {

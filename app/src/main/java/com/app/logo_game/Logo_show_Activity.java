@@ -15,7 +15,7 @@ public class Logo_show_Activity extends AppCompatActivity
 {
     RecyclerView logoRecycler;
     Logo_show_Adpter sub_level_adpter;
-    int i;
+    int pos;
     ArrayList<String> image= new ArrayList<>();
     Button backBtn2;
 
@@ -25,13 +25,19 @@ public class Logo_show_Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_level);
         logoRecycler=findViewById(R.id.logoRecycler);
-        i=getIntent().getIntExtra("i",0);
+        pos=getIntent().getIntExtra("pos",0);
 
         String images[];
         try {
-                images = getAssets().list("Unsold");
+            if (pos==0)
+            {
+                images = getAssets().list("Level 1 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
-
+            }
+            if (pos==1) {
+                images = getAssets().list("Level 2 US/");
+                image = new ArrayList<String>(Arrays.asList(images));
+            }
 
 
         } catch (IOException e) {

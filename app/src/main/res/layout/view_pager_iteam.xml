@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            android:id="@+id/backbtn"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:id="@+id/logo"
+            android:layout_weight="1"
+            android:src="@drawable/adidas_b"/>
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+            android:id="@+id/nextbtn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/hintbtn"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_7sdp"
+            android:background="@drawable/game_complete_background_green"
+            android:text="💡 USE HINT"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/clearbtn"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_7sdp"
+            android:background="@drawable/clear_btn"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/removebtn"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_7sdp"
+            android:background="@drawable/remove_btn"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_8sdp">
+
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_margin="@dimen/_40sdp"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_margin="@dimen/_40sdp"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_margin="@dimen/_40sdp"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_margin="@dimen/_40sdp"/>
+    </LinearLayout>
+
+</LinearLayout>
