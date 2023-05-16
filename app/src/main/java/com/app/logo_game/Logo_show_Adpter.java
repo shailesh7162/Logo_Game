@@ -22,17 +22,18 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
     int pos;
 
 
-    public Logo_show_Adpter(Activity context, ArrayList<String> image)
+    public Logo_show_Adpter(Activity context, ArrayList<String> image,int pos)
     {
         this.context=context;
         this.image=image;
+        this.pos=pos;
     }
 
     @NonNull
     @Override
     public Logo_show_Adpter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
-        view= LayoutInflater.from(context).inflate(R.layout.sub_level_iteam,parent,false);
+        view= LayoutInflater.from(context).inflate(R.layout.logo_show_iteam,parent,false);
         ViewHolder viewHolder=new ViewHolder(view);
         return  viewHolder;
     }

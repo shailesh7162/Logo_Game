@@ -23,7 +23,7 @@ public class Logo_show_Activity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub_level);
+        setContentView(R.layout.activity_logo_show);
         logoRecycler=findViewById(R.id.logoRecycler);
         pos=getIntent().getIntExtra("pos",0);
 
@@ -48,7 +48,7 @@ public class Logo_show_Activity extends AppCompatActivity
 
 
         logoRecycler.setLayoutManager(new LinearLayoutManager(this));
-        sub_level_adpter= new Logo_show_Adpter(this,image);
+        sub_level_adpter= new Logo_show_Adpter(this,image,pos);
         logoRecycler.setAdapter(sub_level_adpter);
 
     }
