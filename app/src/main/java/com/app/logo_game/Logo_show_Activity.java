@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class Logo_show_Activity extends AppCompatActivity
 {
     RecyclerView logoRecycler;
-    Logo_show_Adpter sub_level_adpter;
+    Logo_show_Adpter logo_show_adpter;
     int pos;
     ArrayList<String> image= new ArrayList<>();
     Button backBtn2;
@@ -46,10 +46,10 @@ public class Logo_show_Activity extends AppCompatActivity
 
         System.out.println("imagelist="+image);
 
-
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Logo_show_Activity.this, LinearLayoutManager.HORIZONTAL, false);
         logoRecycler.setLayoutManager(new LinearLayoutManager(this));
-        sub_level_adpter= new Logo_show_Adpter(this,image,pos);
-        logoRecycler.setAdapter(sub_level_adpter);
+        logo_show_adpter= new Logo_show_Adpter(this,image,pos);
+        logoRecycler.setAdapter(logo_show_adpter);
 
     }
 }

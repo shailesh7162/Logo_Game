@@ -28,6 +28,12 @@
             android:src="@drawable/baseline_arrow_forward_ios_24"
             android:id="@+id/nextbtn"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_30sdp">
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -42,6 +48,7 @@
             android:layout_margin="@dimen/_7sdp"
             android:background="@drawable/game_complete_background_green"
             android:text="💡 USE HINT"
+            android:textSize="@dimen/_18sdp"
             app:backgroundTint="@null" />
 
         <Button
@@ -58,35 +65,141 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_margin="@dimen/_7sdp"
             android:background="@drawable/remove_btn"
-            app:backgroundTint="@null" />
+            app:backgroundTint="@null"/>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="@dimen/_8sdp">
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        >
 
         <TextView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
             android:background="@drawable/button_bg"
-            android:layout_margin="@dimen/_40sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text1"
+            android:layout_weight="1"/>
         <TextView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
             android:background="@drawable/button_bg"
-            android:layout_margin="@dimen/_40sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text2"
+            android:layout_weight="1"
+            />
         <TextView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
             android:background="@drawable/button_bg"
-            android:layout_margin="@dimen/_40sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text3"
+            android:layout_weight="1"
+            />
         <TextView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
             android:background="@drawable/button_bg"
-            android:layout_margin="@dimen/_40sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text4"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text5"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text6"
+
+            android:layout_weight="1"   />
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text7"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text8"
+            android:layout_weight="1"/>
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_8sdp">
+
+
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text9"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text10"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text11"/>
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/text12"
+            android:layout_weight="1"/>
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/text13"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/text14"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/text15"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/text16"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
 
 </LinearLayout>
