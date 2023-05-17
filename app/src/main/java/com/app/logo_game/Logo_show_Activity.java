@@ -1,6 +1,7 @@
 package com.app.logo_game;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,7 +15,7 @@ import java.util.Arrays;
 public class Logo_show_Activity extends AppCompatActivity
 {
     RecyclerView logoRecycler;
-    Logo_show_Adpter logo_show_adpter;
+    Logo_show_Adpter sub_level_adpter;
     int pos;
     ArrayList<String> image= new ArrayList<>();
     Button backBtn2;
@@ -26,6 +27,7 @@ public class Logo_show_Activity extends AppCompatActivity
         setContentView(R.layout.activity_logo_show);
         logoRecycler=findViewById(R.id.logoRecycler);
         pos=getIntent().getIntExtra("pos",0);
+        System.out.println("logo show pos =="+pos);
 
         String images[];
         try {
@@ -46,10 +48,11 @@ public class Logo_show_Activity extends AppCompatActivity
 
         System.out.println("imagelist="+image);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Logo_show_Activity.this, LinearLayoutManager.HORIZONTAL, false);
+
         logoRecycler.setLayoutManager(new LinearLayoutManager(this));
-        logo_show_adpter= new Logo_show_Adpter(this,image,pos);
-        logoRecycler.setAdapter(logo_show_adpter);
+        logoRecycler.setLayoutManager(new GridLayoutManager(Logo_show_Activity.this, 2));
+        sub_level_adpter= new Logo_show_Adpter(this,image);
+        logoRecycler.setAdapter(sub_level_adpter);
 
     }
 }

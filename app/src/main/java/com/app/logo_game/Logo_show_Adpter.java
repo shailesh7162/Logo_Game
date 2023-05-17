@@ -1,6 +1,8 @@
 package com.app.logo_game;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,11 +24,10 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
     int pos;
 
 
-    public Logo_show_Adpter(Activity context, ArrayList<String> image,int pos)
+    public Logo_show_Adpter(Activity context, ArrayList<String> image)
     {
         this.context=context;
         this.image=image;
-        this.pos=pos;
     }
 
     @NonNull
@@ -58,6 +59,16 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
         }
         Drawable drawable=Drawable.createFromStream(inputStream,null);
         holder.logo.setImageDrawable(drawable);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Play_Activity.class);
+                intent.putExtra("assets", pos);
+                intent.putExtra("number", holder.getAdapterPosition());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
