@@ -1,6 +1,5 @@
 package com.app.logo_game;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -24,10 +23,11 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
     int pos;
 
 
-    public Logo_show_Adpter(Activity context, ArrayList<String> image)
+    public Logo_show_Adpter(Activity context, ArrayList<String> image, int pos)
     {
         this.context=context;
         this.image=image;
+        this.pos=pos;
     }
 
     @NonNull
@@ -52,6 +52,38 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
             {
                 inputStream = context.getAssets().open("Level 2 US/" + image.get(position));
             }
+            if (pos==2) {
+
+                inputStream = context.getAssets().open("Level 3 US/" + image.get(position));
+            }
+            if (pos==3)
+            {
+                inputStream = context.getAssets().open("Level 4 US/" + image.get(position));
+            }
+            if (pos==4) {
+
+                inputStream = context.getAssets().open("Level 5 US/" + image.get(position));
+            }
+            if (pos==5)
+            {
+                inputStream = context.getAssets().open("Level 6 US/" + image.get(position));
+            }
+            if (pos==6) {
+
+                inputStream = context.getAssets().open("Level 7 US/" + image.get(position));
+            }
+            if (pos==7)
+            {
+                inputStream = context.getAssets().open("Level 8 US/" + image.get(position));
+            }
+            if (pos==8) {
+
+                inputStream = context.getAssets().open("Level 9 US/" + image.get(position));
+            }
+            if (pos==9)
+            {
+                inputStream = context.getAssets().open("Level 10 US/" + image.get(position));
+            }
 
 
         } catch (IOException e) {
@@ -65,7 +97,7 @@ public class Logo_show_Adpter extends RecyclerView.Adapter<Logo_show_Adpter.View
             public void onClick(View view) {
                 Intent intent = new Intent(context, Play_Activity.class);
                 intent.putExtra("assets", pos);
-                intent.putExtra("number", holder.getAdapterPosition());
+                intent.putExtra("Levels", holder.getAdapterPosition());
                 context.startActivity(intent);
             }
         });

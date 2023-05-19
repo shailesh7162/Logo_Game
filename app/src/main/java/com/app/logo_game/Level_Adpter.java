@@ -10,14 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
 {
     Context context;
-    String[] number={"1","2","3","4","5","6","7","8","9","10"};
+    ArrayList<String> levels;
 
-    public Level_Adpter(Context context)
+    public Level_Adpter(Context context, ArrayList levels)
     {
         this.context=context;
+        this.levels=levels;
 
     }
     @NonNull
@@ -31,12 +34,12 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull Level_Adpter.ViewHolder holder, int position) {
-        holder.levelTxtv.setText("LEVEL"+number[position]);
+        holder.levelTxtv.setText(levels.get(position));
         holder.levelTxtv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context, Logo_show_Activity.class);
-                intent.putExtra("i",holder.getAdapterPosition());
+                intent.putExtra("pos",holder.getAdapterPosition());
                 context.startActivity(intent);
             }
         });
@@ -45,7 +48,7 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
 
     @Override
     public int getItemCount() {
-        return number.length;
+        return levels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
