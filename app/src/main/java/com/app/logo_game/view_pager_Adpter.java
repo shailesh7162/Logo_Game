@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -33,15 +32,18 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
     Button ans_Button[];
     static StringBuffer ans=new StringBuffer();
     int t=0;
-    int pos1;
+    int pos1,levels,pos;
     int cnt=0;
+    String j;
 
-    public view_pager_Adpter(Play_Activity play_activity, ArrayList<String> image, ViewPager2 viewPager, int levels)
+    public view_pager_Adpter(Play_Activity play_activity, ArrayList<String> image, ViewPager2 viewPager, int levels, int pos)
     {
         this.play_activity=play_activity;
         this.image=image;
         this.viewPager=viewPager;
         this.pos1=levels;
+        this.pos=pos;
+
     }
 
     @NonNull
@@ -66,49 +68,75 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
     @Override
     public void onBindViewHolder(@NonNull view_pager_Adpter.holderClas holder, int position)
     {
-        if (position==-1)
-        {
-            position++;
+        if (levels == 0) {
+            j = image.get(position);
+        }
+        if (levels == 1) {
+            j = image.get(position);
+        }
+        if (levels == 2) {
+            j = image.get(position);
+        }
+        if (levels == 3) {
+            j = image.get(position);
+        }
+        if (levels == 4) {
+            j = image.get(position);
+        }
+        if (levels == 5) {
+            j = image.get(position);
+        }
+        if (levels == 6) {
+            j = image.get(position);
+        }
+        if (levels == 7) {
+            j = image.get(position);
+        }
+        if (levels == 8) {
+            j = image.get(position);
+        }
+        if (levels == 9) {
+            j = image.get(position);
         }
         InputStream inputStream=null;
         try {
             if (pos1==0) {
 
-                inputStream = play_activity.getAssets().open("Level 1 US/" + image.get(position));
+                inputStream = play_activity.getAssets().open("Level 1 US/" + j);
             }
             if (pos1==1)
             {
-                inputStream = play_activity.getAssets().open("Level 2 US/" + image.get(position));
+                inputStream = play_activity.getAssets().open("Level 2 US/" + j);
             }
-            if (pos1==2) {
+            if (levels==2) {
 
                 inputStream = play_activity.getAssets().open("Level 3 US/" + image.get(position));
             }
-            if (pos1==3)
+            if (levels==3)
             {
                 inputStream = play_activity.getAssets().open("Level 4 US/" + image.get(position));
             }
-            if (pos1==4) {
+            if (levels==4) {
 
                 inputStream = play_activity.getAssets().open("Level 5 US/" + image.get(position));
             }
-            if (pos1==5)
+            if (levels==5)
             {
                 inputStream = play_activity.getAssets().open("Level 6 US/" + image.get(position));
             }
-            if (pos1==6) {
+            if (levels==6) {
 
                 inputStream = play_activity.getAssets().open("Level 7 US/" + image.get(position));
             }
-            if (pos1==7)
+            if (levels==7)
             {
                 inputStream = play_activity.getAssets().open("Level 8 US/" + image.get(position));
             }
-            if (pos1==8) {
+            if (levels==8) {
 
                 inputStream = play_activity.getAssets().open("Level 9 US/" + image.get(position));
             }
-            if (pos1==9)
+            if (levels==9)
             {
                 inputStream = play_activity.getAssets().open("Level 10 US/" + image.get(position));
             }
@@ -211,7 +239,7 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
         public holderClas(@NonNull View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.logo);
-
+            linearLayout=itemView.findViewById(R.id.linear);
             for (int i=0;i<btn.length;i++)
             {
                 int id=play_activity.getResources().getIdentifier("b"+i,"id",play_activity.getPackageName());
