@@ -68,45 +68,51 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
     @Override
     public void onBindViewHolder(@NonNull view_pager_Adpter.holderClas holder, int position)
     {
-        if (levels == 0) {
+        t=0;
+        System.out.println("Fun called=="+(cnt++));
+        if (position==-1)
+        {
+            position++;
+        }
+        if (pos == 0) {
             j = image.get(position);
         }
-        if (levels == 1) {
+        if (pos == 1) {
             j = image.get(position);
         }
-        if (levels == 2) {
+        if (pos == 2) {
             j = image.get(position);
         }
-        if (levels == 3) {
+        if (pos == 3) {
             j = image.get(position);
         }
-        if (levels == 4) {
+        if (pos == 4) {
             j = image.get(position);
         }
-        if (levels == 5) {
+        if (pos == 5) {
             j = image.get(position);
         }
-        if (levels == 6) {
+        if (pos == 6) {
             j = image.get(position);
         }
-        if (levels == 7) {
+        if (pos == 7) {
             j = image.get(position);
         }
-        if (levels == 8) {
+        if (pos == 8) {
             j = image.get(position);
         }
-        if (levels == 9) {
+        if (pos == 9) {
             j = image.get(position);
         }
         InputStream inputStream=null;
         try {
-            if (pos1==0) {
+            if (levels==0) {
 
-                inputStream = play_activity.getAssets().open("Level 1 US/" + j);
+                inputStream = play_activity.getAssets().open("Level 1 US/" + image.get(position));
             }
-            if (pos1==1)
+            if (levels==1)
             {
-                inputStream = play_activity.getAssets().open("Level 2 US/" + j);
+                inputStream = play_activity.getAssets().open("Level 2 US/" + image.get(position));
             }
             if (levels==2) {
 
