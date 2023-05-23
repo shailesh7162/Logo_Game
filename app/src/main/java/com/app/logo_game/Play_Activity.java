@@ -24,53 +24,52 @@ public class Play_Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
         viewPager=findViewById(R.id.viewPager);
-        int levels=getIntent().getIntExtra("asset",0);
-        int pos=getIntent().getIntExtra("pos",0);
+        int levels=getIntent().getIntExtra("pos",0);
 
         String images[];
         try {
-            if (levels==0)
+            if (pos==0)
             {
                 images = getAssets().list("Level 1 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==1) {
+            if (pos==1) {
                 images = getAssets().list("Level 2 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==2)
+            if (pos==2)
             {
                 images = getAssets().list("Level 3 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==3) {
+            if (pos==3) {
                 images = getAssets().list("Level 4 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==4)
+            if (pos==4)
             {
                 images = getAssets().list("Level 5 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==5) {
+            if (pos==5) {
                 images = getAssets().list("Level 6 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==6)
+            if (pos==6)
             {
                 images = getAssets().list("Level 7 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==7) {
+            if (pos==7) {
                 images = getAssets().list("Level 8 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==8)
+            if (pos==8)
             {
                 images = getAssets().list("Level 9 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
-            if (levels==9) {
+            if (pos==9) {
                 images = getAssets().list("Level 10 US/");
                 image = new ArrayList<String>(Arrays.asList(images));
             }
@@ -81,7 +80,7 @@ public class Play_Activity extends AppCompatActivity
         }
 
         System.out.println("imagelist="+image);
-        viewPager.setAdapter(new view_pager_Adpter(this,image,viewPager,levels,pos));
+        viewPager.setAdapter(new view_pager_Adpter(this,image,viewPager,levels));
 
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

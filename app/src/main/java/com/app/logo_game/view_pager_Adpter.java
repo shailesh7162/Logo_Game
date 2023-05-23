@@ -32,18 +32,16 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
     Button ans_Button[];
     static StringBuffer ans=new StringBuffer();
     int t=0;
-    int pos1,levels,pos;
+    int pos1,levels;
     int cnt=0;
     String j;
 
-    public view_pager_Adpter(Play_Activity play_activity, ArrayList<String> image, ViewPager2 viewPager, int levels, int pos)
+    public view_pager_Adpter(Play_Activity play_activity, ArrayList<String> image, ViewPager2 viewPager, int levels)
     {
         this.play_activity=play_activity;
         this.image=image;
         this.viewPager=viewPager;
         this.pos1=levels;
-        this.pos=pos;
-
     }
 
     @NonNull
@@ -74,34 +72,34 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
         {
             position++;
         }
-        if (pos == 0) {
+        if (pos1 == 0) {
             j = image.get(position);
         }
-        if (pos == 1) {
+        if (pos1 == 1) {
             j = image.get(position);
         }
-        if (pos == 2) {
+        if (pos1 == 2) {
             j = image.get(position);
         }
-        if (pos == 3) {
+        if (pos1 == 3) {
             j = image.get(position);
         }
-        if (pos == 4) {
+        if (pos1 == 4) {
             j = image.get(position);
         }
-        if (pos == 5) {
+        if (pos1 == 5) {
             j = image.get(position);
         }
-        if (pos == 6) {
+        if (pos1 == 6) {
             j = image.get(position);
         }
-        if (pos == 7) {
+        if (pos1 == 7) {
             j = image.get(position);
         }
-        if (pos == 8) {
+        if (pos1 == 8) {
             j = image.get(position);
         }
-        if (pos == 9) {
+        if (pos1 == 9) {
             j = image.get(position);
         }
         InputStream inputStream=null;
