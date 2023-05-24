@@ -68,79 +68,46 @@ public class view_pager_Adpter extends RecyclerView.Adapter<view_pager_Adpter.ho
     {
         t=0;
         System.out.println("Fun called=="+(cnt++));
-        if (position==-1)
-        {
-            position++;
-        }
-        if (pos1 == 0) {
-            j = image.get(position);
-        }
-        if (pos1 == 1) {
-            j = image.get(position);
-        }
-        if (pos1 == 2) {
-            j = image.get(position);
-        }
-        if (pos1 == 3) {
-            j = image.get(position);
-        }
-        if (pos1 == 4) {
-            j = image.get(position);
-        }
-        if (pos1 == 5) {
-            j = image.get(position);
-        }
-        if (pos1 == 6) {
-            j = image.get(position);
-        }
-        if (pos1 == 7) {
-            j = image.get(position);
-        }
-        if (pos1 == 8) {
-            j = image.get(position);
-        }
-        if (pos1 == 9) {
-            j = image.get(position);
-        }
+
         InputStream inputStream=null;
         try {
-            if (levels==0) {
+            if (pos1==0) {
 
                 inputStream = play_activity.getAssets().open("Level 1 US/" + image.get(position));
             }
-            if (levels==1)
+            if (pos1==1)
             {
                 inputStream = play_activity.getAssets().open("Level 2 US/" + image.get(position));
             }
-            if (levels==2) {
+            if (pos1==2) {
 
                 inputStream = play_activity.getAssets().open("Level 3 US/" + image.get(position));
             }
-            if (levels==3)
+            if (pos1==3)
             {
                 inputStream = play_activity.getAssets().open("Level 4 US/" + image.get(position));
             }
-            if (levels==4) {
+            if (pos1==4) {
 
                 inputStream = play_activity.getAssets().open("Level 5 US/" + image.get(position));
             }
-            if (levels==5)
+            if (pos1==5)
             {
                 inputStream = play_activity.getAssets().open("Level 6 US/" + image.get(position));
             }
-            if (levels==6) {
+            if (pos1==6) {
 
                 inputStream = play_activity.getAssets().open("Level 7 US/" + image.get(position));
             }
-            if (levels==7)
+            if (pos1==7)
             {
                 inputStream = play_activity.getAssets().open("Level 8 US/" + image.get(position));
             }
-            if (levels==8) {
+            if (pos1==8) {
 
                 inputStream = play_activity.getAssets().open("Level 9 US/" + image.get(position));
             }
-            if (levels==9)
+            if (pos1==9)
             {
                 inputStream = play_activity.getAssets().open("Level 10 US/" + image.get(position));
             }
